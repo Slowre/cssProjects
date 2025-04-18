@@ -1,0 +1,63 @@
+* {
+    box-sizing: content-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #111;
+    height: 100vh;
+    align-content: center;
+    justify-items: center;
+}
+.list{
+    height: 100%;
+    display: flex;
+    gap: 7px;
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+}
+
+img {
+    height: 200px;
+}
+
+.list .item{
+    transition: .5s;
+    filter: brightness(0);
+}
+
+.list .item:hover{
+    filter: brightness(1);
+    transform: translateZ(200px);
+}
+
+.list .item:hover + .item{
+    filter: brightness(.6);
+    transform: translateZ(150px) rotateY(40deg);
+}
+
+.list .item:hover + .item + .item{
+    filter: brightness(.4);
+    transform: translateZ(70px) rotateY(20deg);
+}
+
+.list .item:hover + .item + .item + .item{
+    filter: brightness(.2);
+    transform: translateZ(30px) rotateY(10deg);
+}
+
+.list .item:has(+ .item:hover){
+    filter: brightness(.6);
+    transform: translateZ(150px) rotateY(-40deg);
+}
+
+.list .item:has(+ .item + .item:hover){
+    filter: brightness(.4);
+    transform: translateZ(70px) rotateY(-20deg);
+}
+
+.list .item:has(+ .item + .item + .item:hover){
+    filter: brightness(.2);
+    transform: translateZ(30px) rotateY(-10deg);
+}
