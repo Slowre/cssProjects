@@ -1,0 +1,69 @@
+* {
+    box-sizing: content-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+
+:root {
+    --var: 0deg;
+}
+
+body {
+    background-color: #111;
+    color: aliceblue;
+}
+header{
+    justify-items: center;
+    & h2{
+        width: fit-content;
+    }
+}
+
+.card {
+    width: 300px;
+    background: #222;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    position: relative;
+}
+
+main {
+    justify-items: center;
+}
+
+@property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+.card::after,
+.card::before {
+    content: "";
+    position: absolute;
+    background-image: conic-gradient(from var(--angle), transparent 70%, red);
+    height: calc(100% + 10px);
+    width: calc(100% + 10px);
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+    border-radius: 10px;
+    animation: 3s spin linear infinite;
+}
+
+.card::before {
+    filter: blur(1.5rem);
+    opacity: .5;
+}
+
+@keyframes spin {
+    from {
+        --angle: 0deg
+    }
+
+    to {
+        --angle: 360deg
+    }
+}

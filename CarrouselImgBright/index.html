@@ -3,26 +3,26 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Carrousel Img</title>
     <link
       rel="icon"
       type="image/png"
       sizes="48x48"
-      href="../res/icon meta solution dark.png"
+      href="./res/icon meta solution dark.png"
       media="(prefers-color-scheme: light)"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="48x48"
-      href="../res/icon meta solution light.png"
+      href="./res/icon meta solution light.png"
       media="(prefers-color-scheme: dark)"
     />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <header>
-        <h1>CSS</h1>
+      <h1>CSS</h1>
     </header>
     <main>
       <div class="list">
@@ -40,19 +40,38 @@
       <section class="explanation">
         <h2>Sobre este Proyecto</h2>
         <p>
-          Este proyecto utiliza CSS avanzado para crear un efecto 3D interactivo:
+          Este proyecto utiliza CSS avanzado para crear un efecto 3D
+          interactivo:
         </p>
         <ul>
-          <li><strong>Efectos 3D:</strong> Se usa <code>perspective</code> y <code>transform-style: preserve-3d</code> para simular profundidad.</li>
-          <li><strong>Interactividad:</strong> La pseudoclase <code>:has()</code> y combinadores como <code>+</code> permiten aplicar estilos basados en relaciones entre elementos.</li>
-          <li><strong>Animaciones:</strong> Transiciones suaves (<code>transition</code>) y cambios de brillo (<code>filter</code>) mejoran la experiencia del usuario.</li>
+          <li>
+            <strong>Efectos 3D:</strong> Se usa <code>perspective</code> y
+            <code>transform-style: preserve-3d</code> para simular profundidad.
+          </li>
+          <li>
+            <strong>Interactividad:</strong> La pseudoclase
+            <code>:has()</code> y combinadores como <code>+</code> permiten
+            aplicar estilos basados en relaciones entre elementos.
+          </li>
+          <li>
+            <strong>Animaciones:</strong> Transiciones suaves
+            (<code>transition</code>) y cambios de brillo (<code>filter</code>)
+            mejoran la experiencia del usuario.
+          </li>
         </ul>
         <p>
-          Al pasar el cursor sobre una imagen, esta se desplaza hacia adelante con <code>translateZ</code>, mientras que las imágenes cercanas responden con rotaciones y cambios de brillo. Este diseño combina técnicas modernas de CSS para lograr un efecto visual dinámico y atractivo.
+          Al pasar el cursor sobre una imagen, esta se desplaza hacia adelante
+          con <code>translateZ</code>, mientras que las imágenes cercanas
+          responden con rotaciones y cambios de brillo. Este diseño combina
+          técnicas modernas de CSS para lograr un efecto visual dinámico y
+          atractivo.
         </p>
         <blockquote>
-            Usando <code>.item:has(+ .item:hover)</code> selecciona un <code>&lt;div class="item"></code> si el siguiente <code>&lt;div class="item"></code> está siendo hovereado. Esto permite que los elementos previos al hover también responden visualmente.
-          </blockquote>
+          Usando <code>.item:has(+ .item:hover)</code> selecciona un
+          <code>&lt;div class="item"></code> si el siguiente
+          <code>&lt;div class="item"></code> está siendo hovereado. Esto permite
+          que los elementos previos al hover también responden visualmente.
+        </blockquote>
       </section>
     </main>
   </body>
