@@ -1,63 +1,100 @@
 * {
     box-sizing: content-box;
+    color: aliceblue;
 }
 
 body {
-    margin: 0;
-    padding: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     background: #111;
-    height: 100vh;
-    align-content: center;
+    width: 100vw;
+    margin: 0;
+}
+header{
     justify-items: center;
 }
-.list{
-    height: 100%;
+
+.list {
+    width:100%;
     display: flex;
     gap: 7px;
     transform-style: preserve-3d;
     transform: perspective(1000px);
+    align-items: center;
+    justify-content: center;
 }
 
 img {
-    height: 200px;
+    height: 150px;
 }
 
-.list .item{
+.list .item {
     transition: .5s;
     filter: brightness(0);
 }
 
-.list .item:hover{
+.list .item:hover {
     filter: brightness(1);
     transform: translateZ(200px);
 }
 
-.list .item:hover + .item{
+.list .item:hover+.item {
     filter: brightness(.6);
     transform: translateZ(150px) rotateY(40deg);
 }
 
-.list .item:hover + .item + .item{
+.list .item:hover+.item+.item {
     filter: brightness(.4);
     transform: translateZ(70px) rotateY(20deg);
 }
 
-.list .item:hover + .item + .item + .item{
+.list .item:hover+.item+.item+.item {
     filter: brightness(.2);
     transform: translateZ(30px) rotateY(10deg);
 }
 
-.list .item:has(+ .item:hover){
+.list .item:has(+ .item:hover) {
     filter: brightness(.6);
     transform: translateZ(150px) rotateY(-40deg);
 }
 
-.list .item:has(+ .item + .item:hover){
+.list .item:has(+ .item + .item:hover) {
     filter: brightness(.4);
     transform: translateZ(70px) rotateY(-20deg);
 }
 
-.list .item:has(+ .item + .item + .item:hover){
+.list .item:has(+ .item + .item + .item:hover) {
     filter: brightness(.2);
     transform: translateZ(30px) rotateY(-10deg);
 }
+
+.explanation {
+    background: #222;
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 8px;
+    max-width: 800px;
+  }
+  
+  .explanation h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
+  
+  .explanation ul {
+    list-style-type: disc;
+    padding-left: 20px;
+  }
+  
+  .explanation code {
+    background: #333;
+    color: #6f9fc4;
+    padding: 2px 5px;
+    border-radius: 4px;
+  }
+  .explanation blockquote {
+    background: #333;
+    padding: 10px;
+    border-left: 5px solid #6f9fc4;
+    margin: 10px 0;
+    border-radius: 4px;
+  }
